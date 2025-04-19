@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORON 6</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <script>
+        setTimeout(function() {
+            window.location.href = 'templates/home.html';
+        }, 3000);
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .modal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0F1219 0%, #080B11 100%);
+            animation: fadeIn 0.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .modal::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(92, 68, 246, 0.03) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .modal-content {
+            background: linear-gradient(145deg, #080B11, #0F1219);
+            padding: 80px 60px;
+            border: 1px solid rgba(92, 68, 246, 0.1);
+            width: 95%;
+            max-width: 700px;
+            text-align: center;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3),
+                        0 0 100px rgba(92, 68, 246, 0.05),
+                        inset 0 0 30px rgba(92, 68, 246, 0.02);
+            animation: modalEntrance 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #5C44F6, #00FFAA);
+            animation: loadingBar 3s linear forwards;
+        }
+
+        .modal-content::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(125deg, 
+                    rgba(92, 68, 246, 0.05),
+                    rgba(0, 255, 170, 0.05)),
+                radial-gradient(circle at 20% 80%, 
+                    rgba(92, 68, 246, 0.08) 0%,
+                    transparent 50%),
+                radial-gradient(circle at 80% 20%, 
+                    rgba(0, 255, 170, 0.05) 0%,
+                    transparent 50%);
+            animation: heroGlow 10s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .group-name {
+            font-size: 4em;
+            font-weight: 900;
+            color: #E0E0E6;
+            margin: 0;
+            text-shadow: 0 0 20px rgba(92, 68, 246, 0.2),
+                         0 0 40px rgba(92, 68, 246, 0.1),
+                         0 0 60px rgba(92, 68, 246, 0.05);
+            position: relative;
+            z-index: 2;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .group-name span {
+            display: block;
+            animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .group-name span:nth-child(1) { 
+            font-size: 0.5em;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: #a0a0a6;
+            animation-delay: 0.2s;
+        }
+        
+        .group-name span:nth-child(2) { 
+            font-size: 1em;
+            animation-delay: 0.4s;
+            background: linear-gradient(90deg, #E0E0E6, #5C44F6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            margin: 10px 0;
+        }
+        
+        .group-name span:nth-child(3) { 
+            font-size: 0.5em;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-top: 15px;
+            color: #a0a0a6;
+            animation-delay: 0.6s;
+        }
+
+        .loading-spinner {
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .loading-spinner::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 5px solid rgba(92, 68, 246, 0.1);
+            border-top-color: #5C44F6;
+            border-right-color: #00FFAA;
+            animation: spin 1s linear infinite;
+            box-shadow: 0 0 20px rgba(92, 68, 246, 0.1);
+        }
+
+        .loading-text {
+            margin-top: 30px;
+            color: #a0a0a6;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            opacity: 0.8;
+            position: relative;
+            z-index: 2;
+            text-transform: uppercase;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.4; }
+        }
+
+        @keyframes loadingBar {
+            from { transform: scaleX(0); transform-origin: left; }
+            to { transform: scaleX(1); transform-origin: left; }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        @keyframes modalEntrance {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) rotate(-10deg);
+            }
+            50% {
+                transform: rotate(5deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        @keyframes heroGlow {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        @media screen and (max-width: 768px) {
+            .modal-content {
+                padding: 50px 30px;
+                width: 92%;
+                max-width: 600px;
+            }
+
+            .group-name {
+                font-size: 3.5em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .modal-content {
+                padding: 40px 25px;
+                width: 95%;
+            }
+
+            .group-name {
+                font-size: 3em;
+            }
+
+            .group-name span:nth-child(1),
+            .group-name span:nth-child(3) {
+                font-size: 0.5em;
+                margin: 10px 0;
+            }
+
+            .group-name span:nth-child(2) {
+                font-size: 1.2em;
+                margin: 15px 0;
+            }
+
+            .loading-text {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="introModal" class="modal">
+        <div class="modal-content">
+            <div class="group-name">
+                <span>Welcome to</span>
+                <span>MORON 6</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            const referrer = document.referrer;
+            const currentHost = window.location.host;
+            
+            if (referrer && referrer.includes(currentHost)) {
+                window.location.href = 'home.html' + window.location.hash;
+                return;
+            }
+
+            setTimeout(function() {
+                const modal = document.getElementById('introModal');
+                modal.style.animation = 'fadeOut 0.5s ease-in-out forwards';
+                setTimeout(function() {
+                    const baseUrl = '';
+                    window.location.href = baseUrl + '/templates/home.html' + window.location.hash;
+                }, 500);
+            }, 3000);
+        });
+    </script>
+</body>
+</html> 

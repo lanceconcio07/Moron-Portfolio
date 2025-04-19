@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godffrey's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/godffrey.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../js/sidebar.js" defer></script>
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <a href="home.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+        Back
+    </a>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="home.html" class="logo">GB</a>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="header">
+        <div class="container">
+            <div class="profile-header-img">
+                <img src="../img/Godffrey.jpg" alt="Godffrey Bonza">
+            </div>
+            <h1>Hi, I'm <span class="name-highlight">Godffrey Bonza</span></h1>
+            <p>Front-End Developer | UI/UX Designer | Web Designer</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="../img/Godffrey.jpg" alt="Profile Photo">
+                </div>
+                <div class="about-text">
+                    <p>Hello! I'm a creative front-end developer and UI/UX designer with a passion for building intuitive, visually appealing websites. I specialize in transforming design concepts into responsive, interactive web experiences.</p>
+                    <p>With a keen eye for detail and strong design principles, I create digital experiences that are both beautiful and functional, always putting the user experience first.</p>
+                    
+                    <h3>Education</h3>
+                    <div class="education">
+                        <div class="education-item">
+                            <div class="education-year">2019 - 2023</div>
+                            <h4>Laguna State Polytechnic University</h4>
+                            <p class="education-school">Santa Cruz Campus</p>
+                            <p class="education-desc">Specialized in UI/UX Design and Front-End Development</p>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-year">2017 - 2019</div>
+                            <h4>ACTS Computer College</h4>
+                            <p class="education-school">Santa Cruz, Laguna</p>
+                            <p class="education-desc">STEM Strand - Academic Excellence</p>
+                        </div>
+                    </div>
+                    
+                    <h3>My Skills</h3>
+                    <div class="skills">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">UI/UX Design</span>
+                        <span class="skill-item">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="../img/game-library.png" alt="Game Library Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Game Library Platform</h3>
+                        <p>A modern game library platform featuring a sleek interface for browsing and managing video games. Built with responsive design and interactive features for an enhanced gaming community experience.</p>
+                        <div class="technologies">
+                            <span class="tech-item">HTML5</span>
+                            <span class="tech-item">CSS3</span>
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">Node.js</span>                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/godffrey/game-library" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="../img/snapshop.png" alt="SnapShop E-commerce Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3>SnapShop E-commerce</h3>
+                        <p>A modern e-commerce platform with a stunning dark theme interface, featuring product galleries, category filtering, and a seamless shopping experience. Built with responsive design and smooth animations.</p>
+                        <div class="technologies">
+                            <span class="tech-item">HTML5</span>
+                            <span class="tech-item">CSS3</span>
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">Flask</span>
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">SQL</span>                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/godffrey/snapshop" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT ME</h2>
+            <p>Have a project in mind? Let's work together!</p>
+            
+            <div class="contact-cards">
+                <a href="mailto:godffrey@example.com" class="contact-link">
+                    <div class="glowing-card">
+                        <div class="card-content">
+                            <div class="icon-circle">
+                                <span class="contact-icon">📧</span>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>godffrey.bonza@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="tel:+639123456789" class="contact-link">
+                    <div class="glowing-card">
+                        <div class="card-content">
+                            <div class="icon-circle">
+                                <span class="contact-icon">📱</span>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Contact Number</h3>
+                                <p>+63 945 678 9012</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://maps.google.com/?q=Santa+Cruz,+Laguna,+Philippines" target="_blank" class="contact-link">
+                    <div class="glowing-card">
+                        <div class="card-content">
+                            <div class="icon-circle">
+                                <span class="contact-icon">📍</span>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Location</h3>
+                                <p>Santa Cruz, Laguna, Philippines</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="social-media-section">
+        <div class="container">
+            <h3 class="social-title">Connect With Me</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/prey16" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/godffreybonza/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Godffrey Bonza. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const navOverlay = document.createElement('div');
+        navOverlay.className = 'nav-overlay';
+        document.body.appendChild(navOverlay);
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

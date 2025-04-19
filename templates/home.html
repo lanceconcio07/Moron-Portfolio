@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moron 6 | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Variables -->
+    <style>
+        :root {
+            --primary-color: #5C44F6;
+            --secondary-color: #7D71EC;
+            --accent-color: #00FFAA;
+            --dark-color: #0F1219;
+            --darker-color: #080B11;
+            --medium-dark: #151B27;
+            --light-color: #E0E0E6;
+            --card-bg: #171F2E;
+            --border-color: #2A2F42;
+        }
+    </style>
+    
+    <!-- JavaScript -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/sidebar.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Moron 6</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#mission-vision">Mission</a></li>
+                <li><a href="#mission-vision">Vision</a></li>
+                <li><a href="#core-values">Core Values</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content" style="opacity: 0;">
+            <h1>MORON 6</h1>
+            <p>We're a talented group dedicated to excellence in development and design</p>
+            <div class="hero-buttons">
+                <a href="#team" class="btn" onclick="event.preventDefault(); document.getElementById('team').scrollIntoView({ behavior: 'smooth' });">Meet the Team</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a dynamic team of six professionals with diverse backgrounds and skills from Laguna State Polytechnic University (Santa Cruz Campus). Together, we combine our expertise to deliver exceptional results in our field.</p>
+            <p>Our team values collaboration, innovation, and continuous learning. Each member brings unique perspectives and strengths to our projects.</p>
+            <p>As aspiring IT professionals, we specialize in various areas of technology including:</p>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <h4>Web Development</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Mobile Development</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <h4>Database Management</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-palette"></i>
+                    <h4>UI/UX Design</h4>
+                </div>
+            </div>
+
+            <div class="professional-goals">
+                <h3>Professional Goals</h3>
+                <div class="goals-grid">
+                    <div class="goal-item">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Career Growth</h4>
+                        <p>To become industry leaders in software development and IT solutions, continuously expanding our expertise in emerging technologies.</p>
+                    </div>
+                    <div class="goal-item">
+                        <i class="fas fa-users-gear"></i>
+                        <h4>Team Development</h4>
+                        <p>To foster a collaborative environment where each member can grow professionally while contributing to innovative solutions.</p>
+                    </div>
+                    <div class="goal-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Innovation</h4>
+                        <p>To develop cutting-edge solutions that address real-world challenges and make a positive impact in the tech industry.</p>
+                    </div>
+                    <div class="goal-item">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Professional Excellence</h4>
+                        <p>To achieve industry certifications and maintain the highest standards of professional practice in software development.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="team-description">We are committed to pushing the boundaries of technology and creating innovative solutions that make a difference. Our diverse skill set and collaborative approach enable us to tackle complex challenges and deliver high-quality results.</p>
+        </div>
+    </section>
+
+    <section id="mission-vision" class="mission-vision">
+        <div class="container">
+            <h2>Mission & Vision</h2>
+            <div class="mission-vision-grid">
+                <div class="mission">
+                    <div class="icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To deliver innovative and high-quality solutions that exceed client expectations while fostering a collaborative and learning-driven environment for our team members.</p>
+                </div>
+                <div class="vision">
+                    <div class="icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be recognized as a leading team of professionals who consistently deliver exceptional results through cutting-edge technology, creative problem-solving, and unwavering commitment to excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="core-values" class="core-values">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We constantly seek new ideas and approaches to solve complex problems and drive progress.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of teamwork and diverse perspectives to achieve exceptional results.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We strive for the highest standards in everything we do, from code quality to design.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We act with honesty, transparency, and ethical responsibility in all our interactions.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Continuous Learning</h3>
+                    <p>We embrace lifelong learning and constantly expand our knowledge and skills.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Client Focus</h3>
+                    <p>We prioritize understanding and meeting our clients' needs to deliver exceptional value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <!-- Team members will be dynamically added here using JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Our Moron 6 Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
